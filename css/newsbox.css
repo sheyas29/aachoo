@@ -1,40 +1,21 @@
-.newsbox-heading {
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 10px;
+.scrolling-box {
+  overflow: hidden;
+  height: 400px; /* Adjust the height as needed */
+  position: relative;
 }
 
-.scrolling-box {
-  height: 200px;
-  overflow: hidden;
-  border: 2px solid #ccc;
-  padding: 10px;
-  margin-top: 20px;
-  background-color: #f9f9f9;
-  position: relative;
+#links-list {
+  position: absolute;
+  width: 100%;
 }
 
 .scrolling-box ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  position: absolute;
 }
 
-.scrolling-box ul li {
-  padding: 5px 0;
-}
-
-.scrolling-box ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
-.scrolling-box ul li a:hover {
-  color: #007bff;
-}
-
-footer {
-  margin-top: 50px; /* Add space between the newsbox and footer */
+.scrolling-box li {
+  padding: 10px;
+  box-sizing: border-box;
 }

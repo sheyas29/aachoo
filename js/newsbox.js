@@ -22,16 +22,19 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function startScrolling() {
+    const scrollingBox = document.getElementById('scrolling-box');
     const linksList = document.getElementById('links-list');
     let scrollPosition = 0;
+    let scrollHeight = linksList.scrollHeight;
+    let boxHeight = scrollingBox.clientHeight;
     let scrollInterval;
 
     function scrollContent() {
       scrollPosition++;
-      linksList.style.transform = `translateY(-${scrollPosition}px)`;
-      if (scrollPosition >= linksList.scrollHeight) {
-        scrollPosition = 0;
+      if (scrollPosition >= scrollHeight) {
+        scrollPosition = -boxHeight; // Reset position after all items have scrolled through
       }
+      linksList.style.transform = `translateY(-${scrollPosition}px)`;
     }
 
     function stopScrolling() {
@@ -44,8 +47,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     scrollInterval = setInterval(scrollContent, 30); // Adjust this value to control speed
 
-    linksList.addEventListener('mouseenter', stopScrolling);
-    linksList.addEventListener('mouseleave', resumeScrolling);
+    scrollingBox.addEventListener('mouseenter', stopScrolling);
+    scrollingBox.addEventListener('mouseleave', resumeScrolling);
   }
 
   fetchLinks();
