@@ -54,16 +54,4 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     })
     .catch(error => console.error('Error fetching carousel images:', error));
-
-  // Continuous vertical scroll for newsbox
-  const scrollingBox = document.getElementById('scrolling-box');
-  const linksList = document.getElementById('links-list');
-
-  scrollingBox.addEventListener('mouseover', () => {
-    linksList.style.animationPlayState = 'paused';
-  });
-
-  scrollingBox.addEventListener('mouseout', () => {
-    linksList.style.animationPlayState = 'running';
-  });
 });
