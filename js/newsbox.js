@@ -1,54 +1,48 @@
-document.addEventListener("DOMContentLoaded", function() {
+$(document).ready(function() {
   function fetchLinks() {
-    fetch('/api/links')
-      .then(response => response.json())
-      .then(data => {
-        const linksList = document.getElementById('links-list');
-        linksList.innerHTML = '';
-        data.forEach(link => {
-          const listItem = document.createElement('li');
-          const anchor = document.createElement('a');
-          anchor.href = link.url;
-          anchor.target = '_blank';
-          anchor.textContent = link.name;
-          listItem.appendChild(anchor);
-          linksList.appendChild(listItem);
-        });
-        startScrolling();
-      })
-      .catch(error => {
-        console.log('Error fetching links:', error);
+    $.getJSON('/api/links', function(data) {
+      const linksList = $('#links-list');
+      linksList.empty();
+      $.each(data, function(index, link) {
+        const listItem = $('<li></li>');
+        const anchor = $('<a></a>').attr('href', link.url).attr('target', '_blank').text(link.name);
+        listItem.append(anchor);
+        linksList.append(listItem);
       });
+      startScrolling();
+    }).fail(function() {
+      console.log('Error fetching links');
+    });
   }
 
   function startScrolling() {
-    const scrollingBox = document.getElementById('scrolling-box');
-    const linksList = document.getElementById('links-list');
-    let scrollPosition = 0;
-    let scrollHeight = linksList.scrollHeight;
-    let boxHeight = scrollingBox.clientHeight;
-    let scrollInterval;
+    const linksList = $('#links-list');
+    const scrollingBox = $('#scrolling-box');
+    let scrollHeight = linksList.height();
+    let scrollPosition = scrollingBox.height();
 
     function scrollContent() {
-      scrollPosition++;
-      if (scrollPosition >= scrollHeight) {
-        scrollPosition = -boxHeight; // Reset position after all items have scrolled through
+      scrollPosition -= 1;
+      if (scrollPosition <= -scrollHeight) {
+        scrollPosition = scrollingBox.height();
       }
-      linksList.style.transform = `translateY(-${scrollPosition}px)`;
+      linksList.css('transform', `translateY(${scrollPosition}px)`);
     }
+
+    let scrollInterval = setInterval(scrollContent, 20);
 
     function stopScrolling() {
       clearInterval(scrollInterval);
     }
 
     function resumeScrolling() {
-      scrollInterval = setInterval(scrollContent, 30);
+      scrollInterval = setInterval(scrollContent, 20);
     }
 
-    scrollInterval = setInterval(scrollContent, 30); // Adjust this value to control speed
+    scrollingBox.on('mouseenter', stopScrolling);
+    scrollingBox.on('mouseleave', resumeScrolling);
 
-    scrollingBox.addEventListener('mouseenter', stopScrolling);
-    scrollingBox.addEventListener('mouseleave', resumeScrolling);
+    resumeScrolling(); // Start scrolling on page load
   }
 
   fetchLinks();

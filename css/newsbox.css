@@ -13,7 +13,6 @@
 #links-list {
   position: absolute;
   width: 100%;
-  transition: transform 0.2s ease-in-out; /* Smooth transition */
 }
 
 .scrolling-box ul {
@@ -29,11 +28,6 @@
   border: 1px solid #ced4da; /* Light border for each item */
   border-radius: 4px; /* Rounded corners */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Light shadow */
-  transition: background-color 0.2s ease-in-out; /* Smooth hover transition */
-}
-
-.scrolling-box li:hover {
-  background-color: #e9ecef; /* Slightly darker background on hover */
 }
 
 .scrolling-box a {
