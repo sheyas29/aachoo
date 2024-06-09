@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/newsbox.css">
   <link rel="stylesheet" href="fontawesome-free-6.5.1-web/css/all.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css\accordion.css">
 </head>
 <body>
   <!-- HEADER SECTION -->
@@ -58,12 +59,12 @@
               <li><a class="dropdown-item" href="#">Admin</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Gate Pass</a></li>
-              <li><hr class="dropdown-divider"></li>
+              <li><hr class="dropdown-divider'></li>
               <li><a class="dropdown-item" href="#">Attendance</a></li>
               <li><hr class="dropdown-divider'></li>
               <li><a class="dropdown-item" href="#">X</a></li>
               <li><hr class="dropdown-divider'></li>
-              <li><a class="dropdown-item" href="#">CNOTES</a></li>
+              <li><a class="dropdown-item' href="#">CNOTES</a></li>
               <li><hr class="dropdown-divider'></li>
               <li><a class="dropdown-item" href="#">Temporary Duty, Movement Order, & Transport Requisition</a></li>
             </ul>
@@ -87,79 +88,71 @@
     </nav>
   </header>
 
-  <!-- BODY SECTION -->
-  <div class="container body-content">
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="carousel-container">
-          <div id="carouselExampleControls1" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner" id="carouselInner1">
-              <!-- Images will be dynamically loaded here -->
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls1" role="button" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls1" role="button" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6">
-        <div class="carousel-container">
-          <div id="carouselExampleControls2" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner" id="carouselInner2">
-              <!-- Images will be dynamically loaded here -->
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row" style="margin-top: 30px;">
-      <div class="col-sm-4">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div>
-        </div>
-      </div>
-    </div>
+ 
+ <!-- NOTICE BOARD SECTION -->
+<div class="container notice-board">
+  <h2 class="text-center">Notice Board</h2>
+  <hr>
+  <div class="btn-group " role="group" aria-label="News buttons">
+      <button type="button" class="btn btn-primary active" id="cas-news-btn">X</button>
+      <button type="button" class="btn btn-secondary" id="drdo-news-btn">Y</button>
   </div>
+  <div id="scrolling-box" class="scrolling-box">
+      <div id="links-list" class="scroll-content">
+          <!-- News links will be dynamically loaded here -->
+         
+      </div>
+  </div>
+  <div class="more-news-link">
+      <a href="more_news.html" target="_blank" class="btn btn-link">MORE.....</a>
+  </div>
+</div>
+  <!-- ACCORDION SECTION -->
 
-  <!-- SCROLLING BOX SECTION -->
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <div class="newsbox-heading">
-          <h4>News</h4>
-        </div>
-        <div id="scrolling-box" class="scrolling-box">
-          <ul id="links-list">
-            <!-- News links will be dynamically loaded here -->
-          </ul>
+<div class="container">
+  <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Quote
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body" id="quote-content">
+            <!-- Quote content will be dynamically loaded here -->
+          </div>
         </div>
       </div>
-    </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Security Tip
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body" id="security-tip-content">
+            <!-- Security tip content will be dynamically loaded here -->
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Daily Hindi Word
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body" id="daily-hindi-word-content">
+            <!-- Daily Hindi word content will be dynamically loaded here -->
+          </div>
+        </div>
+      </div>
   </div>
+</div>  
+
 
   <!-- FOOTER SECTION -->
-  <footer class="footer">
+  <footer class="footer mt-5">
     <div class="container">
       <div class="row">
         <div class="col-sm-5">
@@ -198,5 +191,6 @@
   <script src="js/newsbox.js"></script>
   <script src="js/style.js"></script>
   <script src="js/carouselimgs.js"></script>
+  <script src="js/accordion.js"></script>
 </body>
 </html>

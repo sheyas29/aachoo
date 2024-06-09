@@ -1,41 +1,123 @@
-.scrolling-box {
-  overflow: hidden;
-  height: 400px; /* Adjust the height as needed */
-  position: relative;
-  background-color: #f8f9fa; /* Light background color */
-  border: 2px solid #dee2e6; /* Light border */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
-  padding: 10px;
-  margin-top: 20px;
+body {
+  background-color: #f8f9fa;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-#links-list {
+.notice-board {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 40px auto;
+  max-width: 400px;
+  height: 400px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.notice-board:hover {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.notice-board h2 {
+  font-size: 20px;
+  color: #333333;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.notice-board hr {
+  border-top: 1px solid #290909;
+  margin: 10px 0;
+}
+
+/* Adjusting button size independently */
+.btn-group .btn {
+  width: 100px;   /* Desired button width */
+  height: 40px;   /* DEsired button height */
+  padding: 10px 10px; /* Inner spacing */
+  flex: none;     /* Ensure buttons do not flex-grow */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-group .btn:first-child {
+  margin-right: 10px; /* Add gap between buttons */
+}
+
+.btn-group .btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-group .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-group .btn-secondary {
+  background-color: #6c757d;
+  border: none;
+}
+
+.btn-group .btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.scrolling-box {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #e0e0e0;
+  margin-top: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.scroll-content {
   position: absolute;
   width: 100%;
-}
-
-.scrolling-box ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.scrolling-box li {
   padding: 10px;
-  margin-bottom: 10px;
-  background-color: #ffffff; /* White background for each item */
-  border: 1px solid #ced4da; /* Light border for each item */
-  border-radius: 4px; /* Rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Light shadow */
+  animation: scroll-vertical 12s linear infinite;
+  animation-play-state: running;
 }
 
-.scrolling-box a {
+.scroll-content p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #555555;
+}
+
+.scroll-content a {
   text-decoration: none;
-  color: #007bff; /* Link color */
-  font-weight: 500;
+  color: #007bff;
+  transition: color 0.3s;
 }
 
-.scrolling-box a:hover {
+.scroll-content a:hover {
   text-decoration: underline;
+  color: #0056b3;
+}
+
+@keyframes scroll-vertical {
+  0% {
+      top: 100%;
+  }
+  100% {
+      top: -100%;
+  }
+}
+
+.more-news-link {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.more-news-link a {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.more-news-link a:hover {
+  color: #0056b3;
 }

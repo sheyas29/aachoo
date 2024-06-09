@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Scrolling Box</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .scroll-box {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid #ddd;
+        }
+
+        .scroll-content {
+            position: absolute;
+            width: 100%;
+            animation: scroll-vertical 10s linear infinite;
+        }
+
+        @keyframes scroll-vertical {
+            0% {
+                top: 100%;
+            }
+            100% {
+                top: -100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="scroll-box" id="scrollBox">
+        <div class="scroll-content" id="scrollContent">
+            <p><a href="#">Link 1</a></p>
+            <p><a href="#">Link 2</a></p>
+            <p><a href="#">Link 3</a></p>
+            <p><a href="#">Link 4</a></p>
+            <p><a href="#">Link 5</a></p>
+            <p><a href="#">Link 6</a></p>
+        </div>
+    </div>
+</div>
+
+<script>
+    const scrollBox = document.getElementById('scrollBox');
+    const scrollContent = document.getElementById('scrollContent');
+
+    scrollBox.addEventListener('mouseover', () => {
+        scrollContent.style.animationPlayState = 'paused';
+    });
+
+    scrollBox.addEventListener('mouseout', () => {
+        scrollContent.style.animationPlayState = 'running';
+    });
+</script>
+
+</body>
+</html>
