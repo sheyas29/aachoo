@@ -4,7 +4,7 @@ body {
     min-height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, rgba(221, 94, 137, 0.9), rgba(247, 187, 151, 0.9)), url('img1.webp') no-repeat center center;
+    background: linear-gradient(to right, rgba(221, 94, 137, 0.9), rgba(247, 187, 151, 0.9)), url('images\img1.png') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
 }
