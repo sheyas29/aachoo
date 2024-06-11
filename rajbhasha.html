@@ -6,44 +6,60 @@
     <title>Modern Grid Layout</title>
     <link rel="stylesheet" href="css\rajbhasha.css">
 </head>
-<body class="bg-light flex-column min-vh-100">
-    <header class="header text-center py-6 mb-4">
-        <h1 class="header-title">Header</h1>
-        <p class="header-subtitle">An  header</p>
+<body class="bg-light flex-column min-vh-100" style="background: linear-gradient(to right, rgba(221, 94, 137, 0.9), rgba(247, 187, 151, 0.9)), url('img1.webp') no-repeat center center fixed; background-size: cover;">
+    <header class="header text-center">
+        <div class="header-content d-flex align-items-center justify-content-center">
+            <img src="header-image.jpg" alt="Header Image" class="header-image">
+            <div class="header-text">
+                <h1 class="header-title">Welcome to MySite</h1>
+                <p class="header-subtitle">An interactive and aesthetic header</p>
+            </div>
+        </div>
     </header>
     <main class="main flex-fill d-flex justify-content-center align-items-center">
         <div class="container">
             <div class="column">
-                <a href="page1.html" class="box">1</a>
-                <a href="page2.html" class="box">2</a>
-                <a href="page3.html" class="box">3</a>
-                <a href="page4.html" class="box">4</a>
-                <a href="page5.html" class="box">5</a>
-                <a href="page6.html" class="box">6</a>
+                <a href="page1.html" class="box" target="_blank">1</a>
+                <a href="page2.html" class="box" target="_blank">2</a>
+                <a href="page3.html" class="box" target="_blank">3</a>
+                <a href="page4.html" class="box" target="_blank">4</a>
+                <a href="page5.html" class="box" target="_blank">5</a>
+                <a href="page6.html" class="box" target="_blank">6</a>
+            </div>
+            <div class="column no-hover">
+                <div class="box large-box scrollable-box">
+                    <p class="description">Description 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, in pretium orci vestibulum eget.</p>
+                </div>
+                <div class="box large-box scrollable-box">
+                    <p class="description">Description 2: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+                <div class="box large-box scrollable-box">
+                    <p class="description">Description 3: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
             </div>
             <div class="column">
-                <div class="box large-box">
-                    <p>Description 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                <div class="box large-box">
-                    <p>Description 2: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-                <div class="box large-box">
-                    <p>Description 3: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                </div>
-            </div>
-            <div class="column">
-                <a href="page10.html" class="box">10</a>
-                <a href="page11.html" class="box">11</a>
-                <a href="page12.html" class="box">12</a>
-                <a href="page13.html" class="box">13</a>
-                <a href="page14.html" class="box">14</a>
-                <a href="page15.html" class="box">15</a>
+                <a href="page10.html" class="box" target="_blank">10</a>
+                <a href="page11.html" class="box" target="_blank">11</a>
+                <a href="page12.html" class="box" target="_blank">12</a>
+                <a href="page13.html" class="box" target="_blank">13</a>
+                <a href="page14.html" class="box" target="_blank">14</a>
+                <a href="page15.html" class="box" target="_blank">15</a>
             </div>
         </div>
     </main>
-    <footer class="footer text-center py-4 mt-4">
-        <p>Footer content goes here</p>
+    <footer class="footer text-center">
+        <div class="footer-content">
+            <div class="footer-social">
+                <a href="#" class="social-icon">F</a>
+                <a href="#" class="social-icon">T</a>
+                <a href="#" class="social-icon">I</a>
+                <a href="#" class="social-icon">L</a>
+                <a href="#" class="social-icon">Y</a>
+            </div>
+            <p>&copy; 2023 MySite. All rights reserved.</p>
+            <p>1234 Street Name, City, State 56789</p>
+            <p>Email: info@mysite.com | Phone: (123) 456-7890</p>
+        </div>
     </footer>
 </body>
 </html>
