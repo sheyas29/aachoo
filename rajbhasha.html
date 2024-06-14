@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Grid Layout</title>
-    <link rel="stylesheet" href="css\rajbhasha.css">
+    <link rel="stylesheet" href="css/rajbhasha.css">
 </head>
 <body class="bg-light flex-column min-vh-100" style="background: linear-gradient(to right, rgba(221, 94, 137, 0.9), rgba(247, 187, 151, 0.9)), url('images/img1.png') no-repeat center center fixed; background-size: cover;">
     <header class="header text-center">
@@ -16,11 +16,11 @@
             </div>
         </div>
     </header>
-    <main class="main flex-fill d-flex justify-content-center align-items-center">
+    <main id="main-content" class="main flex-fill d-flex justify-content-center align-items-center">
         <div class="container">
             <div class="column">
-                <a href="page1.html" class="box" target="_blank">1</a>
-                <div class="box" onclick="toggleDropdown(event)">2</div>
+                <a href="backpage.html" class="box" target="_blank">1</a>
+                <div class="box dropdown" onclick="toggleDropdown(event)">2</div>
                 <div class="dropdown-content">
                     <a href="link1.html" target="_blank">Link 1</a>
                     <a href="link2.html" target="_blank">Link 2</a>
@@ -32,13 +32,13 @@
             </div>
             <div class="column no-hover">
                 <div class="box large-box scrollable-box">
-                    <p class="description">इसे राष्ट्र-भाषा या टकसाली-भाषा भी कहा जाता है।</p>
+                    <p class="description">Description 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus. Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, in pretium orci vestibulum eget.</p>
                 </div>
                 <div class="box large-box scrollable-box">
-                    <p class="description">प्रायः देखा जाता है कि विभिन्न विभाषाओं में से कोई एक विभाषा अपने गुण-गौरव, साहित्यिक अभिवृद्धि, जन-सामान्य में अधिक प्रचलन आदि के आधार पर राजकार्य के लिए चुन ली जाती है और उसे राजभाषा के रूप में या राष्ट्रभाषा घोषित कर दिया जाता है।</p>
+                    <p class="description">Description 2: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 </div>
                 <div class="box large-box scrollable-box">
-                    <p class="description">परिचय विधिक प्रास्थिति भारत का संविधान के भाग 17 में अनुच्छेद 343 से 351 तक राजभाषा संबंधी प्रावधान विहित हैं I</p>
+                    <p class="description">Description 3: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 </div>
             </div>
             <div class="column">
@@ -52,7 +52,7 @@
         </div>
     </main>
     <footer class="footer text-center">
-        
+      
     </footer>
 
     <script>
