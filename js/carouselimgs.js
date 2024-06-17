@@ -1,49 +1,55 @@
-document.addEventListener('DOMContentLoaded', function() {
-  // Fetch images for the first carousel
-  fetch('/api/carousel-images')
-    .then(response => response.json())
-    .then(data => {
-      const carouselInner1 = document.getElementById('carouselInner1');
-      
-      data.forEach((image, index) => {
-        const activeClass = index === 0 ? 'active' : '';
-        const carouselItem = `
-          <div class="carousel-item ${activeClass}">
-            <div class="card" style="width: 100%;">
-              <img src="${image.image_path}" class="card-img-top" alt="${image.caption}">
-              <div class="card-body">
-                <h5 class="card-title">${image.caption}</h5>
-                <p class="card-text">Description for ${image.caption}.</p>
-              </div>
-            </div>
-          </div>`;
-        
-        carouselInner1.innerHTML += carouselItem;
+document.addEventListener("DOMContentLoaded", function () {
+  function setupCarousel(carouselInnerId, images) {
+    const carouselInner = document.getElementById(carouselInnerId);
+
+    images.forEach((image, index) => {
+      const activeClass = index === 0 ? "active" : "";
+      const carouselItem = `
+        <div class="carousel-item ${activeClass}">
+          <img src="${image.image_path}" class="d-block w-100 carousel-image" alt="${image.caption}">
+        </div>`;
+
+      carouselInner.innerHTML += carouselItem;
+    });
+
+    // Add event listeners to images
+    const carouselImages = document.querySelectorAll(
+      `#${carouselInnerId} .carousel-image`
+    );
+    carouselImages.forEach((img) => {
+      img.addEventListener("click", function () {
+        showModal(this.src);
       });
-    })
-    .catch(error => console.error('Error fetching carousel images:', error));
+    });
+  }
+
+  function showModal(imageSrc) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    modalImg.src = imageSrc;
+    modal.style.display = "block";
+  }
+
+  // Close the modal
+  const modal = document.getElementById("imageModal");
+  const closeBtn = document.getElementsByClassName("close")[0];
+
+  closeBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  // Close the modal when clicking outside the image
+  modal.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
 
   // Fetch images for the second carousel
-  fetch('/api/carousel-images-2')
-    .then(response => response.json())
-    .then(data => {
-      const carouselInner2 = document.getElementById('carouselInner2');
-      
-      data.forEach((image, index) => {
-        const activeClass = index === 0 ? 'active' : '';
-        const carouselItem = `
-          <div class="carousel-item ${activeClass}">
-            <div class="card" style="width: 100%;">
-              <img src="${image.image_path}" class="card-img-top" alt="${image.caption}">
-              <div class="card-body">
-                <h5 class="card-title">${image.caption}</h5>
-                <p class="card-text">Description for ${image.caption}.</p>
-              </div>
-            </div>
-          </div>`;
-        
-        carouselInner2.innerHTML += carouselItem;
-      });
+  fetch("/api/carousel-images-2")
+    .then((response) => response.json())
+    .then((data) => {
+      setupCarousel("carouselInner2", data);
     })
-    .catch(error => console.error('Error fetching carousel images:', error));
+    .catch((error) => console.error("Error fetching carousel images:", error));
 });

@@ -14,18 +14,18 @@
 </head>
 <body>
   <!-- HEADER SECTION -->
-  <header class="jumbotron">
+  <header class="jumbotron text-center">
     <div class="flash-news">
       <h6>Flash NEWS</h6>
       <marquee scrollamount="10">Website content is pretty much anything that appears on a website that provides some sort of information.</marquee>
     </div>
     <div class="header-content">
       <div class="container">
-        <div class="row">
+        <div class="row align-items-center">
           <div class="col-sm-2">
-            <img class="image" src="images\drdo_logo.jpeg" alt="DRDO Logo">
+            <img class="image" src="images/drdo_logo.jpeg" alt="DRDO Logo">
           </div>
-          <div class="col-sm-10">
+          <div class="col-sm-10 text-start">
             <h1>X</h1>
             <p>X</p>
           </div>
@@ -33,11 +33,11 @@
       </div>
     </div>
     <nav class="navbar navbar-dark navbar-expand-sm nav-links">
-      <div class="container" style="padding: 10px;">
-        <ul class="navbar-nav mr-auto">
+      <div class="container">
+        <ul class="navbar-nav me-auto">
           <li class="nav-item active"><a class="nav-link active" href="#"><i class="fas fa-home"></i> HOME</a></li>
           <li class="nav-item"><a class="nav-link" href="#">X</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">FORM</a></li>
+          <li class="nav-item"><a class="nav-link" href="forms.html">FORM</a></li>
           <li class="nav-item"><a class="nav-link" href="#">YOGA BREAK</a></li>
           <li class="nav-item"><a class="nav-link" href="#">X</a></li>
           <li class="nav-item"><a class="nav-link" href="#">USC(X)</a></li>
@@ -88,76 +88,102 @@
     </nav>
   </header>
 
-  <!-- NOTICE BOARD SECTION -->
-  <div class="container notice-board">
-    <h2 class="text-center">Notice Board</h2>
-    <hr>
-    <div class="btn-group " role="group" aria-label="News buttons">
-      <button type="button" class="btn btn-primary active" id="cas-news-btn">X</button>
-      <button type="button" class="btn btn-secondary" id="drdo-news-btn">Y</button>
-    </div>
-    <div id="scrolling-box" class="scrolling-box">
-      <div id="links-list" class="scroll-content">
-        <!-- News links will be dynamically loaded here -->
+  <!-- NOTICE BOARD & ACCORDION SECTION -->
+  <div class="container mt-4">
+    <div class="row">
+      <!-- NOTICE BOARD -->
+      <div class="col-lg-6 notice-board">
+        <h2 class="text-center">Notice Board</h2>
+        <hr>
+        <div class="btn-group mb-3 d-flex justify-content-center" role="group" aria-label="News buttons">
+          <button type="button" class="btn btn-primary active" id="cas-news-btn">CAS</button>
+          <button type="button" class="btn btn-secondary" id="drdo-news-btn">DRDO HQ</button>
+        </div>
+        <div id="scrolling-box" class="scrolling-box">
+          <div id="links-list" class="scroll-content">
+            <!-- News links will be dynamically loaded here -->
+          </div>
+        </div>
+        <div class="text-center mt-2">
+          <a href="more_news.html" target="_blank" class="btn btn-link">MORE.....</a>
+        </div>
       </div>
-    </div>
-    <div class="more-news-link">
-      <a href="more_news.html" target="_blank" class="btn btn-link">MORE.....</a>
+
+      <!-- ACCORDION -->
+      <div class="col-lg-6">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Quote
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body" id="quote-content">
+                <!-- Quote content will be dynamically loaded here -->
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Security Tip
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div class="accordion-body" id="security-tip-content">
+                <!-- Security tip content will be dynamically loaded here -->
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Daily Hindi Word
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body" id="daily-hindi-word-content">
+                <!-- Daily Hindi word content will be dynamically loaded here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- ACCORDION SECTION -->
-  <div class="container mt-5 d-flex justify-content-center">
-    <div class="accordion" id="accordionExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            Quote
-          </button>
-        </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-          <div class="accordion-body" id="quote-content">
-            <!-- Quote content will be dynamically loaded here -->
+  <!-- CAROUSEL SECTION -->
+  
+   
+    
+        <div id="carouselExampleControls2" class="carousel slide carousel-container" data-bs-ride="carousel">
+          <div class="carousel-inner" id="carouselInner2">
+            <!-- Carousel items will be dynamically loaded here -->
           </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Security Tip
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
           </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-          <div class="accordion-body" id="security-tip-content">
-            <!-- Security tip content will be dynamically loaded here -->
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Daily Hindi Word
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
           </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-          <div class="accordion-body" id="daily-hindi-word-content">
-            <!-- Daily Hindi word content will be dynamically loaded here -->
-          </div>
         </div>
-      </div>
-    </div>
-  </div>  
+      
+    
+  
 
   <!-- CUSTOM CONTAINER SECTION -->
   <div class="container custom-container mt-5">
     <div class="custom-container-header">
       <h2>Navigation</h2>
     </div>
-    <div class="row">
+    <div class="row g-3">
       <!-- Create 11 boxes here -->
       <div class="col-lg-2 col-md-3 col-sm-4 col-6">
         <div class="custom-box">
-          <a href="https://example.com">
+          <a href="do-parts.html">
             <img src="images/download.png" alt="Example 1" class="img-fluid custom-box-image">
             <hr class="custom-line">
             <h3>Box Title 1</h3>
@@ -254,7 +280,45 @@
           </a>
         </div>
       </div>
-      <!-- Add additional boxes as needed -->
+    </div>
+  </div>
+
+  <!-- INFO BOX SECTION -->
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="info-box" style=" background: linear-gradient(rgba(244, 240, 240, 0.1), rgba(255, 255, 255, 0.1)), 
+              url('images/vsion.webp') no-repeat center/cover;">
+          <div class="info-box-title">
+            <h3>Vison</h3>
+          </div>
+          <div class="info-box-content">
+            <p>There are a number of reasons you may need a block of text and when you do, a random paragraph can be the perfect solution. If you happen to be a web designer and you need some random text to show in your layout, a random paragraph can be an excellent way to do this. If you're a programmer and you need random text to test the program, using these paragraphs can be the perfect way to do this. Anyone who's in search of realistic text for a project can use one or more of these random paragraphs to fill their need..</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="info-box" style=" background: linear-gradient(rgba(240, 230, 230, 0), rgba(255, 255, 255, 0)), 
+              url('images/backgound.jpg') no-repeat center/cover;">
+          <div class="info-box-title">
+            <h3>Mission</h3>
+          </div>
+          <div class="info-box-content">
+            <p>There are a number of reasons you may need a block of text and when you do, a random paragraph can be the perfect solution. If you happen to be a web designer and you need some random text to show in your layout, a random paragraph can be an excellent way to do this. If you're a programmer and you need random text to test the program, using these paragraphs can be the perfect way to do this. Anyone who's in search of realistic text for a project can use one or more of these random paragraphs to fill their need...</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="info-box" style=" background: linear-gradient(rgba(240, 230, 230, 0), rgba(255, 255, 255, 0)), 
+              url('images/quality_chck.webp') no-repeat center/cover;">
+          <div class="info-box-title">
+            <h3>Quality policy</h3>
+          </div>
+          <div class="info-box-content">
+            <p>There are a number of reasons you may need a block of text and when you do, a random paragraph can be the perfect solution. If you happen to be a web designer and you need some random text to show in your layout, a random paragraph can be an excellent way to do this. If you're a programmer and you need random text to test the program, using these paragraphs can be the perfect way to do this. Anyone who's in search of realistic text for a project can use one or more of these random paragraphs to fill their need..</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -291,6 +355,12 @@
       </div>
     </div>
   </footer>
+  <!-- Modal Structure -->
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
+
 
   <!-- Bootstrap and jQuery JS -->
   <script src="js/jquery-3.7.1.js"></script>
@@ -299,5 +369,6 @@
   <script src="js/style.js"></script>
   <script src="js/carouselimgs.js"></script>
   <script src="js/accordion.js"></script>
+ 
 </body>
 </html>

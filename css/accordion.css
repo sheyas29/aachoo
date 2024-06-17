@@ -1,38 +1,38 @@
-  .accordion-container {
-    height: 200px;
-    width: 200px;
-  }
-  
-  .accordion-item {
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
-  }
-  
-  .accordion-button {
-    background-color: #007bff;
-    color: #ffffff;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    margin: 2px;
-  }
-  
-  .accordion-button:not(.collapsed) {
-    background-color: #0056b3;
-    color: #ffffff;
-    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
-  }
-  
-  .accordion-button:focus {
-    box-shadow: none;
-  }
-  
-  .accordion-body {
-    background-color: #f8f9fa;
-    border-top: 1px solid #dee2e6;
-    padding: 20px;
-    font-size: 1rem;
-    color: #212529;
-  }
+.accordion-container {
+  height: 200px;
+  width: 200px;
+}
+
+.accordion-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.accordion-button {
+  background-color: rgba(68, 176, 158, 0.85);
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  margin: 2px;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #0056b3;
+  color: #ffffff;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-body {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  padding: 20px;
+  font-size: 1rem;
+  color: #212529;
+}

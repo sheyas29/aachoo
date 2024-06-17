@@ -1,0 +1,123 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #44b09e;
+  background-image: linear-gradient(315deg, #44b09e 0%, #e0d2c7 74%);
+  background-size: cover;
+  background-attachment: fixed;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("https://www.transparenttextures.com/patterns/cubes.png");
+  opacity: 0.9;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.jumbotron {
+  background: linear-gradient(
+    315deg,
+    rgba(68, 176, 158, 0.85) 0%,
+    rgba(224, 210, 199, 0.85) 74%
+  );
+  color: white;
+  padding: 2rem 1rem;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.navbar {
+  background-color: rgba(44, 62, 80, 0.85);
+}
+
+.navbar .nav-link {
+  color: #ecf0f1 !important;
+}
+
+.navbar .nav-link:hover {
+  color: #3498db !important;
+}
+
+.do-parts {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.do-parts-header {
+  background-color: rgba(46, 82, 82, 0.85);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.do-part-box {
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.do-part-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.do-part-box h3 {
+  font-size: 1.25rem;
+  color: #007bff;
+  margin: 0;
+}
+
+.clickable {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.footer {
+  background-color: rgba(46, 82, 82, 0.85);
+  color: #d6d3d3;
+  padding: 20px 0;
+}
+
+.footer h3 {
+  color: #ecf0f1;
+}
+
+.footer .footer-links a {
+  color: #bdc3c7;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.footer .footer-links a:hover {
+  color: #3498db;
+}
+
+.footer .footer-center p {
+  font-style: italic;
+}
+
+.footer .footer-center i {
+  margin-right: 10px;
+}
+
+.footer .footer-title {
+  font-weight: bold;
+}
