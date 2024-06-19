@@ -97,16 +97,56 @@ app.get("/api/carousel-images-2", (req, res) => {
     res.json(result);
   });
 });
-// API endpoint to get parts
+// API endpoint to get parts for the current year
 app.get("/api/parts", (req, res) => {
-  const { month, year } = req.query;
-  const sql = "SELECT title, link FROM parts WHERE month = ? AND year = ?";
-  db.query(sql, [month, year], (err, result) => {
+  const currentYear = new Date().getFullYear();
+  const sql =
+    'SELECT title, link, DATE_FORMAT(date, "%M/%Y") as date FROM parts WHERE year = ?';
+  db.query(sql, [currentYear], (err, result) => {
     if (err) throw err;
     res.json(result);
   });
 });
 
+// API endpoint to get parts for previous years
+app.get("/api/parts/archive", (req, res) => {
+  const { year, month } = req.query;
+  const sql =
+    'SELECT title, link, DATE_FORMAT(date, "%M/%Y") as date FROM parts WHERE year = ? AND month = ?';
+  db.query(sql, [year, month], (err, result) => {
+    if (err) throw err;
+    res.json(result);
+  });
+});
+
+// API endpoint to get available years and months for the archive
+app.get("/api/parts/archive/years-months", (req, res) => {
+  const currentYear = new Date().getFullYear();
+  const sql = `
+    SELECT DISTINCT YEAR(date) as year, DATE_FORMAT(date, '%M') as month
+    FROM parts
+    WHERE year < ?
+    ORDER BY year DESC, MONTH(date) DESC
+  `;
+  db.query(sql, [currentYear], (err, result) => {
+    if (err) throw err;
+
+    const yearsMonths = {};
+    result.forEach((row) => {
+      if (!yearsMonths[row.year]) {
+        yearsMonths[row.year] = [];
+      }
+      yearsMonths[row.year].push(row.month);
+    });
+
+    const data = Object.keys(yearsMonths).map((year) => ({
+      year: year,
+      months: yearsMonths[year],
+    }));
+
+    res.json(data);
+  });
+});
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

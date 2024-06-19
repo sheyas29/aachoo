@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Do Parts</title>
+    <title>Archive</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -64,59 +64,25 @@
       </nav>
     </header>
 
-    <!-- DO PARTS SECTION -->
+    <!-- ARCHIVE SECTION -->
     <div class="container do-parts">
-      <div
-        class="do-parts-header d-flex justify-content-between align-items-center mb-4"
-      >
-        <h2>Do Parts</h2>
-        <div class="dropdown">
-          <h2
-            id="month-year"
-            class="clickable dropdown-toggle"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Month/Year
-          </h2>
-          <ul class="dropdown-menu" id="month-year-dropdown">
-            <!-- Dropdown items will be loaded dynamically -->
-          </ul>
+      <div class="row">
+        <div class="col-md-3">
+          <!-- Sidebar for Navigation -->
+          <div class="sidebar">
+            <h3>Archives</h3>
+            <ul id="archive-sidebar" class="list-group">
+              <!-- Years and Months will be dynamically loaded here -->
+            </ul>
+          </div>
         </div>
-      </div>
-      <div id="do-parts-content" class="row">
-        <!-- Part boxes will be loaded here -->
-      </div>
-      <!-- Button Bar -->
-      <div class="button-bar mt-4">
-        <div class="btn-group" role="group">
-          <button
-            class="btn btn-primary btn-sm btn-compact"
-            onclick="prevMonth()"
-          >
-            Prev
-          </button>
-          <button
-            class="btn btn-primary btn-sm btn-compact"
-            onclick="nextMonth()"
-          >
-            Next
-          </button>
-        </div>
-        <div class="btn-group" role="group">
-          <button
-            class="btn btn-secondary btn-sm btn-compact"
-            id="archive-button"
-          >
-            Archive
-          </button>
-          <button
-            class="btn btn-secondary btn-sm btn-compact"
-            id="admin-button"
-            onclick="openAdmin()"
-          >
-            Admin
-          </button>
+        <div class="col-md-9">
+          <div class="do-parts-header mb-4">
+            <h2>Archive</h2>
+          </div>
+          <div id="archive-content" class="row mt-4">
+            <!-- Parts will be dynamically loaded here -->
+          </div>
         </div>
       </div>
     </div>
@@ -173,6 +139,6 @@
     <!-- Bootstrap and jQuery JS -->
     <script src="js/jquery-3.7.1.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/do-parts.js"></script>
+    <script src="js/archive.js"></script>
   </body>
 </html>
