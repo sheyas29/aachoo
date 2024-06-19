@@ -150,6 +150,24 @@ app.get("/api/parts/archive/years-months", (req, res) => {
     res.json(data);
   });
 });
+// Endpoint to fetch middle column content
+app.get("/api/middle-column", (req, res) => {
+  const sql = "SELECT title, description FROM middle_column LIMIT 3"; // Adjust SQL query as needed
+  db.query(sql, (err, result) => {
+    if (err) throw err;
+    res.json(result);
+  });
+});
+
+// API endpoint to get carousel images for gallery
+app.get("/api/carousel-images-gallery", (req, res) => {
+  const sql = "SELECT image_path, caption FROM carousel_images_gallery";
+  db.query(sql, (err, result) => {
+    if (err) throw err;
+    res.json(result);
+  });
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

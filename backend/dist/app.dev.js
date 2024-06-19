@@ -138,6 +138,23 @@ app.get("/api/parts/archive/years-months", function (req, res) {
     });
     res.json(data);
   });
+}); // Endpoint to fetch middle column content
+
+app.get("/api/middle-column", function (req, res) {
+  var sql = "SELECT title, description FROM middle_column LIMIT 3"; // Adjust SQL query as needed
+
+  db.query(sql, function (err, result) {
+    if (err) throw err;
+    res.json(result);
+  });
+}); // API endpoint to get carousel images for gallery
+
+app.get("/api/carousel-images-gallery", function (req, res) {
+  var sql = "SELECT image_path, caption FROM carousel_images_gallery";
+  db.query(sql, function (err, result) {
+    if (err) throw err;
+    res.json(result);
+  });
 });
 var PORT = process.env.PORT || 3000;
 app.listen(PORT, function () {

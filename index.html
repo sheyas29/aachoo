@@ -1,374 +1,644 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>CAS Website</title>
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/newsbox.css">
-  <link rel="stylesheet" href="fontawesome-free-6.5.1-web/css/all.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/accordion.css">
-</head>
-<body>
-  <!-- HEADER SECTION -->
-  <header class="jumbotron text-center">
-    <div class="flash-news">
-      <h6>Flash NEWS</h6>
-      <marquee scrollamount="10">Website content is pretty much anything that appears on a website that provides some sort of information.</marquee>
-    </div>
-    <div class="header-content">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-sm-2">
-            <img class="image" src="images/drdo_logo.jpeg" alt="DRDO Logo">
-          </div>
-          <div class="col-sm-10 text-start">
-            <h1>X</h1>
-            <p>X</p>
-          </div>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>CAS Website</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/newsbox.css" />
+    <link rel="stylesheet" href="fontawesome-free-6.5.1-web/css/all.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/accordion.css" />
+  </head>
+  <body>
+    <!-- HEADER SECTION -->
+    <header class="jumbotron text-center">
+      <div class="flash-news">
+        <h6>Flash NEWS</h6>
+        <marquee scrollamount="10"
+          >Website content is pretty much anything that appears on a website
+          that provides some sort of information.</marquee
+        >
       </div>
-    </div>
-    <nav class="navbar navbar-dark navbar-expand-sm nav-links">
-      <div class="container">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item active"><a class="nav-link active" href="#"><i class="fas fa-home"></i> HOME</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">X</a></li>
-          <li class="nav-item"><a class="nav-link" href="forms.html">FORM</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">YOGA BREAK</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">X</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">USC(X)</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              APPLICATION
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">X</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">IMMS</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">DG(X) e-File Process</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">XSoftware</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Finance</a></li>
-              <li><hr class="dropdown-divider'></li>
-              <li><a class="dropdown-item" href="#">Admin</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Gate Pass</a></li>
-              <li><hr class="dropdown-divider'></li>
-              <li><a class="dropdown-item" href="#">Attendance</a></li>
-              <li><hr class="dropdown-divider'></li>
-              <li><a class="dropdown-item" href="#">X</a></li>
-              <li><hr class="dropdown-divider'></li>
-              <li><a class="dropdown-item' href="#">CNOTES</a></li>
-              <li><hr class="dropdown-divider'></li>
-              <li><a class="dropdown-item" href="#">Temporary Duty, Movement Order, & Transport Requisition</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="#">DIGITAL LIBRARY</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              X
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">X</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">X</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="#">MATLAB</a></li>
-          <li class="nav-item"><a class="nav-link" href="directors_profile.html">DIRECTOR'S PROFILE</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">GALLERY</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-  <!-- NOTICE BOARD & ACCORDION SECTION -->
-  <div class="container mt-4">
-    <div class="row">
-      <!-- NOTICE BOARD -->
-      <div class="col-lg-6 notice-board">
-        <h2 class="text-center">Notice Board</h2>
-        <hr>
-        <div class="btn-group mb-3 d-flex justify-content-center" role="group" aria-label="News buttons">
-          <button type="button" class="btn btn-primary active" id="cas-news-btn">CAS</button>
-          <button type="button" class="btn btn-secondary" id="drdo-news-btn">DRDO HQ</button>
-        </div>
-        <div id="scrolling-box" class="scrolling-box">
-          <div id="links-list" class="scroll-content">
-            <!-- News links will be dynamically loaded here -->
-          </div>
-        </div>
-        <div class="text-center mt-2">
-          <a href="more_news.html" target="_blank" class="btn btn-link">MORE.....</a>
-        </div>
-      </div>
-
-      <!-- ACCORDION -->
-      <div class="col-lg-6">
-        <div class="accordion" id="accordionExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Quote
-              </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-              <div class="accordion-body" id="quote-content">
-                <!-- Quote content will be dynamically loaded here -->
-              </div>
+      <div class="header-content" style="position: relative">
+        <div
+          style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to right,
+                rgba(182, 225, 196, 0.6),
+                rgba(30, 55, 37, 0.6)
+              ),
+              url('images/backgound.jpg') no-repeat center center;
+            background-size: cover;
+            z-index: 1;
+          "
+        ></div>
+        <div class="container" style="position: relative; z-index: 2">
+          <div class="row align-items-center">
+            <div class="col-sm-2">
+              <img
+                class="image"
+                src="images/drdo_logo.jpeg"
+                alt="DRDO Logo"
+                style="width: 100%; height: auto"
+              />
             </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Security Tip
-              </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-              <div class="accordion-body" id="security-tip-content">
-                <!-- Security tip content will be dynamically loaded here -->
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingThree">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Daily Hindi Word
-              </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-              <div class="accordion-body" id="daily-hindi-word-content">
-                <!-- Daily Hindi word content will be dynamically loaded here -->
-              </div>
+            <div class="col-sm-10 text-start">
+              <h1
+                style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0"
+              >
+                X
+              </h1>
+              <p style="font-size: 1.2rem; margin-top: 0">X</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+      <nav class="navbar navbar-dark navbar-expand-sm nav-links">
+        <div class="container">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item active">
+              <a class="nav-link active" href="#"
+                ><i class="fas fa-home"></i> HOME</a
+              >
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">X</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="forms.html">FORM</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">YOGA BREAK</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">X</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">USC(X)</a></li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                APPLICATION
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li><a class="dropdown-item" href="#">X</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">IMMS</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">DG(X) e-File Process</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">XSoftware</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Finance</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Admin</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Gate Pass</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Attendance</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">X</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">CNOTES</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Temporary Duty, Movement Order, & Transport Requisition</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">DIGITAL LIBRARY</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                X
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li><a class="dropdown-item" href="#">X</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">X</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">MATLAB</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="director's_profile.html"
+                >DIRECTOR'S PROFILE</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">GALLERY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="rajbhasha.html">RAJBHASHA</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-  <!-- CAROUSEL SECTION -->
-  
-   
-    
-        <div id="carouselExampleControls2" class="carousel slide carousel-container" data-bs-ride="carousel">
-          <div class="carousel-inner" id="carouselInner2">
-            <!-- Carousel items will be dynamically loaded here -->
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      
-    
-  
-
-  <!-- CUSTOM CONTAINER SECTION -->
-  <div class="container custom-container mt-5">
-    <div class="custom-container-header">
-      <h2>Navigation</h2>
-    </div>
-    <div class="row g-3">
-      <!-- Create 11 boxes here -->
-      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-        <div class="custom-box">
-          <a href="do-parts.html">
-            <img src="images/download.png" alt="Example 1" class="img-fluid custom-box-image">
-            <hr class="custom-line">
-            <h3>Box Title 1</h3>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-        <div class="custom-box">
-          <a href="https://example.com">
-            <img src="images/download.png" alt="Example 2" class="img-fluid custom-box-image">
-            <hr class="custom-line">
-            <h3>Box Title 2</h3>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-        <div class="custom-box">
-          <a href="https://example.com">
-            <img src="images/download.png" alt="Example 3" class="img-fluid custom-box-image">
-            <hr class="custom-line">
-            <h3>Box Title 3</h3>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-        <div class="custom-box">
-          <a href="https://example.com">
-            <img src="images/download.png" alt="Example 4" class="img-fluid custom-box-image">
-            <hr class="custom-line">
-            <h3>Box Title 4</h3>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-        <div class="custom-box">
-          <a href="https://example.com">
-            <img src="images/HR.webp" alt="Example 5" class="img-fluid custom-box-image">
-            <hr class="custom-line">
-            <h3>Box Title 5</h3>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-        <div class="custom-box">
-          <a href="https://example.com">
-            <img src="images/img3.jpeg" alt="Example 6" class="img-fluid custom-box-image">
-            <hr class="custom-line">
-            <h3>Box Title 6</h3>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-        <div class="custom-box">
-          <a href="https://example.com">
-            <img src="images/img3.jpeg" alt="Example 7" class="img-fluid custom-box-image">
-            <hr class="custom-line">
-            <h3>Box Title 7</h3>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-        <div class="custom-box">
-          <a href="https://example.com">
-            <img src="images/img3.jpeg" alt="Example 8" class="img-fluid custom-box-image">
-            <hr class="custom-line">
-            <h3>Box Title 8</h3>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-        <div class="custom-box">
-          <a href="https://example.com">
-            <img src="images/music.png" alt="Example 9" class="img-fluid custom-box-image">
-            <hr class="custom-line">
-            <h3>Box Title 9</h3>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-        <div class="custom-box">
-          <a href="https://example.com">
-            <img src="images/img3.jpeg" alt="Example 10" class="img-fluid custom-box-image">
-            <hr class="custom-line">
-            <h3>Box Title 10</h3>
-          </a>
-        </div>
-      </div>
-      <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-        <div class="custom-box">
-          <a href="https://example.com">
-            <img src="images/img3.jpeg" alt="Example 11" class="img-fluid custom-box-image">
-            <hr class="custom-line">
-            <h3>Box Title 11</h3>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- INFO BOX SECTION -->
-  <div class="container mt-4">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="info-box" style=" background: linear-gradient(rgba(244, 240, 240, 0.1), rgba(255, 255, 255, 0.1)), 
-              url('images/vsion.webp') no-repeat center/cover;">
-          <div class="info-box-title">
-            <h3>Vison</h3>
-          </div>
-          <div class="info-box-content">
-            <p>There are a number of reasons you may need a block of text and when you do, a random paragraph can be the perfect solution. If you happen to be a web designer and you need some random text to show in your layout, a random paragraph can be an excellent way to do this. If you're a programmer and you need random text to test the program, using these paragraphs can be the perfect way to do this. Anyone who's in search of realistic text for a project can use one or more of these random paragraphs to fill their need..</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="info-box" style=" background: linear-gradient(rgba(240, 230, 230, 0), rgba(255, 255, 255, 0)), 
-              url('images/backgound.jpg') no-repeat center/cover;">
-          <div class="info-box-title">
-            <h3>Mission</h3>
-          </div>
-          <div class="info-box-content">
-            <p>There are a number of reasons you may need a block of text and when you do, a random paragraph can be the perfect solution. If you happen to be a web designer and you need some random text to show in your layout, a random paragraph can be an excellent way to do this. If you're a programmer and you need random text to test the program, using these paragraphs can be the perfect way to do this. Anyone who's in search of realistic text for a project can use one or more of these random paragraphs to fill their need...</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="info-box" style=" background: linear-gradient(rgba(240, 230, 230, 0), rgba(255, 255, 255, 0)), 
-              url('images/quality_chck.webp') no-repeat center/cover;">
-          <div class="info-box-title">
-            <h3>Quality policy</h3>
-          </div>
-          <div class="info-box-content">
-            <p>There are a number of reasons you may need a block of text and when you do, a random paragraph can be the perfect solution. If you happen to be a web designer and you need some random text to show in your layout, a random paragraph can be an excellent way to do this. If you're a programmer and you need random text to test the program, using these paragraphs can be the perfect way to do this. Anyone who's in search of realistic text for a project can use one or more of these random paragraphs to fill their need..</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- FOOTER SECTION -->
-  <footer class="footer mt-5">
-    <div class="container">
+    <div class="container mt-4">
       <div class="row">
-        <div class="col-sm-5">
-          <h3>X</h3>
-          <p class="footer-links">
-            <a href="index.html" class="link-1">Home</a>
-            <a href="#">About</a>
-            <a href="#">Library</a>
-            <a href="#">Contact</a>
-            <a href="directors_profile.html">Director's Profile</a>
-          </p>
-        </div>
-        <div class="col-sm-4">
-          <div class="footer-center">
-            <div>
-              <p><span class="footer-title"><i class="fa-solid fa-location-dot"></i> X</span> X</p>
-            </div>
-            <div>
-              <p><i class="fa-solid fa-phone"></i>040-2048-4444</p>
-            </div>
-            <div>
-              <p><a href="mailto:support@cas.com"><i class="fa-solid fa-envelope"></i> support@cas.com</a></p>
+        <!-- CAROUSEL SECTION -->
+        <div class="col-lg-6">
+          <div class="carousel-container">
+            <div
+              id="carouselExampleControls2"
+              class="carousel slide carousel-container"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner" id="carouselInner2">
+                <!-- Carousel items will be dynamically loaded here -->
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleControls2"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleControls2"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
           </div>
         </div>
-        <div class="col-sm-3">
-          <p><span class="footer-title">About X</span>Website content is pretty much anything that appears on a website that provides some sort of information.</p>
+        <!-- NOTICE BOARD -->
+        <div class="col-lg-6">
+          <div class="notice-board">
+            <h2 class="text-center">Notice Board</h2>
+            <hr />
+            <div
+              class="btn-group mb-3 d-flex justify-content-center"
+              role="group"
+              aria-label="News buttons"
+            >
+              <button
+                type="button"
+                class="btn btn-primary active"
+                id="cas-news-btn"
+              >
+                CAS
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                id="drdo-news-btn"
+              >
+                DRDO HQ
+              </button>
+            </div>
+            <div id="scrolling-box" class="scrolling-box">
+              <div id="links-list" class="scroll-content">
+                <!-- News links will be dynamically loaded here -->
+              </div>
+            </div>
+            <div class="text-center mt-2">
+              <a href="more_news.html" target="_blank" class="btn btn-link"
+                >MORE.....</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- ACCORDION -->
+        <div class="col-lg-6">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  Quote
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body" id="quote-content">
+                  <!-- Quote content will be dynamically loaded here -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  Security Tip
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body" id="security-tip-content">
+                  <!-- Security tip content will be dynamically loaded here -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Daily Hindi Word
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body" id="daily-hindi-word-content">
+                  <!-- Daily Hindi word content will be dynamically loaded here -->
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </footer>
-  <!-- Modal Structure -->
-<div id="imageModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="modalImage">
-</div>
 
+    <!-- CUSTOM CONTAINER SECTION -->
+    <div class="container custom-container mt-4">
+      <div class="custom-container-header">
+        <h2>Navigation</h2>
+      </div>
+      <div class="row g-3">
+        <!-- Create 11 boxes here -->
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+          <div class="custom-box">
+            <a href="do-parts.html">
+              <img
+                src="images/download.png"
+                alt="Example 1"
+                class="img-fluid custom-box-image"
+              />
+              <hr class="custom-line" />
+              <h3>Box Title 1</h3>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+          <div class="custom-box">
+            <a href="https://example.com">
+              <img
+                src="images/download.png"
+                alt="Example 2"
+                class="img-fluid custom-box-image"
+              />
+              <hr class="custom-line" />
+              <h3>Box Title 2</h3>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+          <div class="custom-box">
+            <a href="https://example.com">
+              <img
+                src="images/download.png"
+                alt="Example 3"
+                class="img-fluid custom-box-image"
+              />
+              <hr class="custom-line" />
+              <h3>Box Title 3</h3>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+          <div class="custom-box">
+            <a href="https://example.com">
+              <img
+                src="images/download.png"
+                alt="Example 4"
+                class="img-fluid custom-box-image"
+              />
+              <hr class="custom-line" />
+              <h3>Box Title 4</h3>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+          <div class="custom-box">
+            <a href="https://example.com">
+              <img
+                src="images/HR.webp"
+                alt="Example 5"
+                class="img-fluid custom-box-image"
+              />
+              <hr class="custom-line" />
+              <h3>Box Title 5</h3>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+          <div class="custom-box">
+            <a href="https://example.com">
+              <img
+                src="images/img3.jpeg"
+                alt="Example 6"
+                class="img-fluid custom-box-image"
+              />
+              <hr class="custom-line" />
+              <h3>Box Title 6</h3>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+          <div class="custom-box">
+            <a href="https://example.com">
+              <img
+                src="images/img3.jpeg"
+                alt="Example 7"
+                class="img-fluid custom-box-image"
+              />
+              <hr class="custom-line" />
+              <h3>Box Title 7</h3>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+          <div class="custom-box">
+            <a href="https://example.com">
+              <img
+                src="images/img3.jpeg"
+                alt="Example 8"
+                class="img-fluid custom-box-image"
+              />
+              <hr class="custom-line" />
+              <h3>Box Title 8</h3>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+          <div class="custom-box">
+            <a href="https://example.com">
+              <img
+                src="images/music.png"
+                alt="Example 9"
+                class="img-fluid custom-box-image"
+              />
+              <hr class="custom-line" />
+              <h3>Box Title 9</h3>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+          <div class="custom-box">
+            <a href="https://example.com">
+              <img
+                src="images/img3.jpeg"
+                alt="Example 10"
+                class="img-fluid custom-box-image"
+              />
+              <hr class="custom-line" />
+              <h3>Box Title 10</h3>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+          <div class="custom-box">
+            <a href="https://example.com">
+              <img
+                src="images/img3.jpeg"
+                alt="Example 10"
+                class="img-fluid custom-box-image"
+              />
+              <hr class="custom-line" />
+              <h3>Box Title 10</h3>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+          <div class="custom-box">
+            <a href="https://example.com">
+              <img
+                src="images/img3.jpeg"
+                alt="Example 10"
+                class="img-fluid custom-box-image"
+              />
+              <hr class="custom-line" />
+              <h3>Box Title 10</h3>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <!-- Bootstrap and jQuery JS -->
-  <script src="js/jquery-3.7.1.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/newsbox.js"></script>
-  <script src="js/style.js"></script>
-  <script src="js/carouselimgs.js"></script>
-  <script src="js/accordion.js"></script>
- 
-</body>
+    <!-- INFO BOX SECTION -->
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-4">
+          <div
+            class="info-box"
+            style="
+              background: linear-gradient(
+                  rgba(244, 240, 240, 0.1),
+                  rgba(255, 255, 255, 0.1)
+                ),
+                url('images/vsion.webp') no-repeat center/cover;
+            "
+          >
+            <div class="info-box-title">
+              <h3>Vison</h3>
+            </div>
+            <div class="info-box-content">
+              <p>
+                There are a number of reasons you may need a block of text and
+                when you do, a random paragraph can be the perfect solution. If
+                you happen to be a web designer and you need some random text to
+                show in your layout, a random paragraph can be an excellent way
+                to do this. If you're a programmer and you need random text to
+                test the program, using these paragraphs can be the perfect way
+                to do this. Anyone who's in search of realistic text for a
+                project can use one or more of these random paragraphs to fill
+                their need..
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div
+            class="info-box"
+            style="
+              background: linear-gradient(
+                  rgba(240, 230, 230, 0),
+                  rgba(255, 255, 255, 0)
+                ),
+                url('images/backgound.jpg') no-repeat center/cover;
+            "
+          >
+            <div class="info-box-title">
+              <h3>Mission</h3>
+            </div>
+            <div class="info-box-content">
+              <p>
+                There are a number of reasons you may need a block of text and
+                when you do, a random paragraph can be the perfect solution. If
+                you happen to be a web designer and you need some random text to
+                show in your layout, a random paragraph can be an excellent way
+                to do this. If you're a programmer and you need random text to
+                test the program, using these paragraphs can be the perfect way
+                to do this. Anyone who's in search of realistic text for a
+                project can use one or more of these random paragraphs to fill
+                their need...
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div
+            class="info-box"
+            style="
+              background: linear-gradient(
+                  rgba(240, 230, 230, 0),
+                  rgba(255, 255, 255, 0)
+                ),
+                url('images/quality_chck.webp') no-repeat center/cover;
+            "
+          >
+            <div class="info-box-title">
+              <h3>Quality policy</h3>
+            </div>
+            <div class="info-box-content">
+              <p>
+                There are a number of reasons you may need a block of text and
+                when you do, a random paragraph can be the perfect solution. If
+                you happen to be a web designer and you need some random text to
+                show in your layout, a random paragraph can be an excellent way
+                to do this. If you're a programmer and you need random text to
+                test the program, using these paragraphs can be the perfect way
+                to do this. Anyone who's in search of realistic text for a
+                project can use one or more of these random paragraphs to fill
+                their need..
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-5">
+            <h3>X</h3>
+            <p class="footer-links">
+              <a href="index.html" class="link-1">Home</a>
+              <a href="#">About</a>
+              <a href="#">Library</a>
+              <a href="#">Contact</a>
+              <a href="directors_profile.html">Director's Profile</a>
+            </p>
+          </div>
+          <div class="col-sm-4">
+            <div class="footer-center">
+              <div>
+                <p>
+                  <span class="footer-title"
+                    ><i class="fa-solid fa-location-dot"></i> X</span
+                  >
+                  X
+                </p>
+              </div>
+              <div>
+                <p><i class="fa-solid fa-phone"></i>040-2048-4444</p>
+              </div>
+              <div>
+                <p>
+                  <a href="mailto:support@cas.com"
+                    ><i class="fa-solid fa-envelope"></i> support@cas.com</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <p>
+              <span class="footer-title">About X</span>Website content is pretty
+              much anything that appears on a website that provides some sort of
+              information.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Modal Structure -->
+    <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImage" />
+    </div>
+
+    <!-- Bootstrap and jQuery JS -->
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/newsbox.js"></script>
+    <script src="js/style.js"></script>
+    <script src="js/carouselimgs.js"></script>
+    <script src="js/accordion.js"></script>
+  </body>
 </html>

@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const activeClass = index === 0 ? "active" : "";
       const carouselItem = `
         <div class="carousel-item ${activeClass}">
-          <img src="${image.image_path}" class="d-block w-100 carousel-image" alt="${image.caption}">
+          <img src="${image.image_path}" class="d-block w-100 carousel-image border-image" alt="${image.caption}">
         </div>`;
 
       carouselInner.innerHTML += carouselItem;
