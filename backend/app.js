@@ -99,13 +99,16 @@ app.get("/api/carousel-images-2", (req, res) => {
 });
 // API endpoint to get parts for the current year
 app.get("/api/parts", (req, res) => {
-  const currentYear = new Date().getFullYear();
-  const sql =
-    'SELECT title, link, DATE_FORMAT(date, "%M/%Y") as date FROM parts WHERE year = ?';
-  db.query(sql, [currentYear], (err, result) => {
-    if (err) throw err;
-    res.json(result);
-  });
+  const { month, year } = req.query;
+  const sql = "SELECT * FROM parts WHERE MONTH(date) = ? AND YEAR(date) = ?";
+  db.query(
+    sql,
+    [new Date(`${month} 1, ${year}`).getMonth() + 1, year],
+    (err, result) => {
+      if (err) throw err;
+      res.json(result);
+    }
+  );
 });
 
 // API endpoint to get parts for previous years

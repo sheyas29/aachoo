@@ -96,18 +96,20 @@ app.get("/api/carousel-images-2", function (req, res) {
 }); // API endpoint to get parts for the current year
 
 app.get("/api/parts", function (req, res) {
-  var currentYear = new Date().getFullYear();
-  var sql = 'SELECT title, link, DATE_FORMAT(date, "%M/%Y") as date FROM parts WHERE year = ?';
-  db.query(sql, [currentYear], function (err, result) {
+  var _req$query = req.query,
+      month = _req$query.month,
+      year = _req$query.year;
+  var sql = "SELECT * FROM parts WHERE MONTH(date) = ? AND YEAR(date) = ?";
+  db.query(sql, [new Date("".concat(month, " 1, ").concat(year)).getMonth() + 1, year], function (err, result) {
     if (err) throw err;
     res.json(result);
   });
 }); // API endpoint to get parts for previous years
 
 app.get("/api/parts/archive", function (req, res) {
-  var _req$query = req.query,
-      year = _req$query.year,
-      month = _req$query.month;
+  var _req$query2 = req.query,
+      year = _req$query2.year,
+      month = _req$query2.month;
   var sql = 'SELECT title, link, DATE_FORMAT(date, "%M/%Y") as date FROM parts WHERE year = ? AND month = ?';
   db.query(sql, [year, month], function (err, result) {
     if (err) throw err;
