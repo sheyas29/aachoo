@@ -1,0 +1,160 @@
+SQL COMMAND 
+
+-- do-parts
+CREATE TABLE parts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    link VARCHAR(255) NOT NULL,
+    date DATE NOT NULL,
+    month VARCHAR(50) AS (DATE_FORMAT(date, '%M')) VIRTUAL,
+    year INT AS (YEAR(date)) VIRTUAL
+);
+
+-- populate do-parts
+INSERT INTO parts (title, link, date) VALUES 
+('Part 1', 'https://example.com/part1', '2023-01-15'),
+('Part 2', 'https://example.com/part2', '2023-02-20'),
+('Part 3', 'https://example.com/part3', '2023-03-10'),
+('Part 4', 'https://example.com/part4', '2023-04-25'),
+('Part 5', 'https://example.com/part5', '2023-05-30'),
+('Part 6', 'https://example.com/part6', '2023-06-05'),
+('Part 7', 'https://example.com/part7', '2023-07-12'),
+('Part 8', 'https://example.com/part8', '2023-08-18'),
+('Part 9', 'https://example.com/part9', '2023-09-23'),
+('Part 10', 'https://example.com/part10', '2023-10-28'),
+
+('Part 1', 'https://example.com/part1', '2024-01-15'),
+('Part 2', 'https://example.com/part2', '2024-02-20'),
+('Part 3', 'https://example.com/part3', '2024-03-10'),
+('Part 4', 'https://example.com/part4', '2024-04-25'),
+('Part 5', 'https://example.com/part5', '2024-05-30'),
+('Part 6', 'https://example.com/part6', '2024-06-05'),
+('Part 7', 'https://example.com/part7', '2024-07-12'),
+('Part 8', 'https://example.com/part8', '2024-08-18'),
+('Part 9', 'https://example.com/part9', '2024-09-23'),
+('Part 10', 'https://example.com/part10', '2024-10-28'),
+
+('Part 1', 'https://example.com/part1', '2025-01-15'),
+('Part 2', 'https://example.com/part2', '2025-02-20'),
+('Part 3', 'https://example.com/part3', '2025-03-10'),
+('Part 4', 'https://example.com/part4', '2025-04-25'),
+('Part 5', 'https://example.com/part5', '2025-05-30'),
+('Part 6', 'https://example.com/part6', '2025-06-05'),
+('Part 7', 'https://example.com/part7', '2025-07-12'),
+('Part 8', 'https://example.com/part8', '2025-08-18'),
+('Part 9', 'https://example.com/part9', '2025-09-23'),
+('Part 10', 'https://example.com/part10', '2025-10-28'),
+
+('Part 1', 'https://example.com/part1', '2026-01-15'),
+('Part 2', 'https://example.com/part2', '2026-02-20'),
+('Part 3', 'https://example.com/part3', '2026-03-10'),
+('Part 4', 'https://example.com/part4', '2026-04-25'),
+('Part 5', 'https://example.com/part5', '2026-05-30'),
+('Part 6', 'https://example.com/part6', '2026-06-05'),
+('Part 7', 'https://example.com/part7', '2026-07-12'),
+('Part 8', 'https://example.com/part8', '2026-08-18'),
+('Part 9', 'https://example.com/part9', '2026-09-23'),
+('Part 10', 'https://example.com/part10', '2026-10-28');
+
+
+-- Table for Carousel Images in Gallery
+CREATE TABLE carousel_images_gallery (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  image_path VARCHAR(255) NOT NULL,
+  caption VARCHAR(255) NOT NULL
+);
+-- Populate Carousel Images for Gallery
+INSERT INTO carousel_images_gallery (image_path, caption) VALUES
+('images/gallery1.jpg', 'Gallery Image 1 Caption'),
+('images/gallery2.jpg', 'Gallery Image 2 Caption'),
+('images/gallery3.jpg', 'Gallery Image 3 Caption'),
+('images/gallery4.jpg', 'Gallery Image 4 Caption'),
+('images/gallery5.jpg', 'Gallery Image 5 Caption');
+
+-- Table for CAS News
+CREATE TABLE cas_news (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  url VARCHAR(255) NOT NULL
+);
+
+-- Table for DRDO HQ News
+CREATE TABLE drdo_news (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  url VARCHAR(255) NOT NULL
+);
+
+-- Table for Quotes
+CREATE TABLE quotes (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  content TEXT NOT NULL
+);
+
+-- Table for Security Tips
+CREATE TABLE security_tips (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  content TEXT NOT NULL
+);
+
+-- Table for Daily Hindi Words
+CREATE TABLE daily_hindi_words (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  content TEXT NOT NULL
+);
+
+-- Table for Carousel Images
+CREATE TABLE carousel_images (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  image_path VARCHAR(255) NOT NULL,
+  caption VARCHAR(255) NOT NULL
+);
+
+-- Table for second set of Carousel Images
+CREATE TABLE carousel_images_2 (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  image_path VARCHAR(255) NOT NULL,
+  caption VARCHAR(255) NOT NULL
+);
+
+-- Populate CAS News
+INSERT INTO cas_news (name, url) VALUES
+('CAS News 1', 'https://example.com/cas-news-1'),
+('CAS News 2', 'https://example.com/cas-news-2'),
+('CAS News 3', 'https://example.com/cas-news-3');
+
+-- Populate DRDO HQ News
+INSERT INTO drdo_news (name, url) VALUES
+('DRDO HQ News 1', 'https://example.com/drdo-hq-news-1'),
+('DRDO HQ News 2', 'https://example.com/drdo-hq-news-2'),
+('DRDO HQ News 3', 'https://example.com/drdo-hq-news-3');
+
+-- Populate Quotes
+INSERT INTO quotes (content) VALUES
+('This is a random quote 1.'),
+('This is a random quote 2.'),
+('This is a random quote 3.');
+
+-- Populate Security Tips
+INSERT INTO security_tips (content) VALUES
+('This is a random security tip 1.'),
+('This is a random security tip 2.'),
+('This is a random security tip 3.');
+
+-- Populate Daily Hindi Words
+INSERT INTO daily_hindi_words (content) VALUES
+('यह एक दैनिक हिंदी शब्द है 1.'),
+('यह एक दैनिक हिंदी शब्द है 2.'),
+('यह एक दैनिक हिंदी शब्द है 3.');
+
+-- Populate Carousel Images
+INSERT INTO carousel_images (image_path, caption) VALUES
+('images/carousel1.jpg', 'This is the first image caption'),
+('images/carousel2.jpg', 'This is the second image caption'),
+('images/carousel3.jpg', 'This is the third image caption');
+
+-- Populate second set of Carousel Images
+INSERT INTO carousel_images_2 (image_path, caption) VALUES
+('images/carousel2-1.jpg', 'This is the first image caption of second set'),
+('images/carousel2-2.jpg', 'This is the second image caption of second set'),
+('images/carousel2-3.jpg', 'This is the third image caption of second set');
